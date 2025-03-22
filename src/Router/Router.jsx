@@ -12,6 +12,9 @@ let router = createBrowserRouter([
             {
                 path: '/',
                 element: <Home />
+            },
+            {
+                
             }
         ]
     }
