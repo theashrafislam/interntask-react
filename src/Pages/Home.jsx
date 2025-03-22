@@ -3,7 +3,7 @@ import Button from '../Components/Button';
 
 const Home = () => {
     return (
-        <div className='mx-3 flex justify-center items-end min-h-screen'>
+        <div className='px-4 flex justify-center items-end min-h-screen bg-[#F7F8F9]'>
             <div className='mb-[100px]'>
                 <h2 className='text-[28px] font-medium text-[#1D2226] mb-[10px]'>Welcome to PopX</h2>
                 <p className='text-lg text-[#1D2226] opacity-60'>Lorem ipsum dolor sit amet, consectetur adipiscing elit,</p>
