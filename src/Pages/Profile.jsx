@@ -9,7 +9,10 @@ const Profile = () => {
             <h1 className='px-4 pt-[27px] pb-[19px] text-lg text-[#1D2226]'>Account Settings</h1>
             <section className='bg-[#F7F8F9] px-4 pt-[30px]'>
                 <div className='flex items-start gap-5 pb-[30px]'>
-                    <img src="/profile.png" alt="profile photo" />
+                    <div className='relative'>
+                        <img src="/profile.png" alt="profile photo" />
+                        <img src="/icon.png" alt="icon" className='absolute right-0 top-14'/>
+                    </div>
                     <div className='flex flex-col gap-[6px] items-start'>
                         <h5 className='text-base text-[#1D2226] font-semibold'>{data?.fullName || 'Marry Doe'}</h5>
                         <p className='text-sm text-[#1D2226]'>{data?.email || 'Marry@Gmail.Com'}</p>
