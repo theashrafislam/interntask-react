@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 const Button = ({value}) => {
     if(value === 'Create Account'){
@@ -14,9 +14,9 @@ const Button = ({value}) => {
     }
     if(value === 'Already Registered? Login')
     return (
-        <Link to={'/sign-in'} className='w-full py-3 rounded-lg text-center bg-[#6C25FF4B] text-[#1D2226] text-base font-semibold'>
+        <button className='w-full py-3 rounded-lg text-center bg-[#6C25FF4B] text-[#1D2226] text-base font-semibold'>
             Already Registered? Login
-        </Link>
+        </button>
     );
 };
 

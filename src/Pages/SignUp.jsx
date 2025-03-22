@@ -1,30 +1,28 @@
 import React from 'react';
 import Button from '../Components/Button';
+import { useDispatch } from 'react-redux';
+import { signUp } from '../Features/useProfileSlice';
+import { useNavigate } from 'react-router-dom';
 
 const SignUp = () => {
+    const dispatch = useDispatch();
+    const navigate = useNavigate();
+
     const handleForm = (event) => {
         event.preventDefault();
         const form = event.target;
-        
+
         const fullName = form.name.value;
         const phone = form.phone.value;
         const email = form.email.value;
         const password = form.password.value;
         const companyName = form.companyName.value;
         const agency = form.querySelector('input[name="agency"]:checked')?.value || "Not selected";
-    
-        const formData = {
-            fullName,
-            phone,
-            email,
-            password,
-            companyName,
-            agency
-        };
-    
-        console.log(formData);
+
+        dispatch(signUp({ fullName, email }));
+        navigate('/profile')
     };
-    
+
 
     return (
         <div className='bg-[#F7F8F9] px-4 flex flex-col min-h-screen'>
